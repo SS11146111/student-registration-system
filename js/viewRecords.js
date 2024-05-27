@@ -22,9 +22,9 @@ var tableData = data.map(record => (
     const data = e.target;
     if(data.classList[0] === "deleteBtn"){
         const parent = data.parentNode.parentNode;
-        //const text=parent.childNodes[2].innerHTML;
-        //alert(text);
-        parent.remove();
+        const text=parent.childNodes[3].innerHTML;
+        
+        //parent.remove();
     }
   }
   )
