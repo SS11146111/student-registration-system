@@ -180,7 +180,7 @@ input{
     left: 300px;
 }
 
-#editBtn{
+.editBtn{
     width: 60px;
     padding: 5px;
     background-color: rgb(89, 168, 228);
@@ -190,11 +190,11 @@ input{
     font-size: 13px;
 }
 
-#editBtn:hover{
+.editBtn:hover{
     background-color: rgb(160, 205, 240);
 }
 
-#deleteBtn{
+.deleteBtn{
     width: 60px;
     padding: 5px;
     background-color: rgb(241, 18, 18);
@@ -205,7 +205,7 @@ input{
     font-size: 13px;
 }
 
-#deleteBtn:hover{
+.deleteBtn:hover{
     background-color: rgb(237, 99, 99);
     color: black;
 }
