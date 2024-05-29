@@ -41,6 +41,7 @@
             <table id="table-structure">
                 <thead id="tableHead">
                     <tr>
+                        <td id="boundary"></td>
                         <td>Name</td>
                         <td>ID</td>
                         <td>E-mail</td>
@@ -56,6 +57,45 @@
                 </tbody>
             </table>
         </div>
+
+
+        <section id="editContainer">
+            <button id="closeTab"><i class="fa fa-close"></i></button>
+            <form id="editForm">
+                <table id="editTable">
+                    <tr>
+                        <!--name-->
+                        <td><label for="fullname"><i class="fa fa-pencil gap"></i></label></td>
+                        <td><input type="text" class="size" id="fullname" name="fullname" placeholder="STUDENT NAME" required/></td> 
+                    </tr>
+                    <tr>
+                        <!--name-->
+                    <td><label for="studentid"><i class="fa fa-id-card gap"></i></label></td>
+                    <td><input type="text" class="size" id="studentid" name="studentid" placeholder="STUDENT ID" required/></td> 
+                    </tr>
+                    <tr>
+                        <!--mail-->
+                        <td><label for="mail"><i class="fa fa-envelope gap"></i></label></td>
+                        <td> <input type="email" class="size" id="mail" name="mail" placeholder="EMAIL ID" required/></td>  
+                    </tr>
+                    <tr>
+                        <!--number-->
+                        <td><label for="number"><i class="fa fa-phone gap"></i></label></td>
+                        <td> <input type="tel" class="size" id="number" name="number" placeholder="CONTACT NO." maxlength="10" required/></td> 
+                    </tr>
+                    <tr>
+                        <!--submit button-->
+                        
+                        <td></td>
+                        <td><button id="updateBtn" class="addRecordBtn">Update Record</button></td> 
+                    </tr> 
+                    <tr>
+                        <td colspan="2"><p id="submitSuccess"></p></td>
+                    </tr>
+                </table>  
+            </form>
+        </section>
+       
     </div>
 </body>
 </html>

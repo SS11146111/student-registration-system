@@ -251,4 +251,38 @@ input{
     color: black;
 }
 
+#editContainer{
+   
 
+    display: none;
+    background-color: bisque;
+    width: 40%;
+    margin-top: 150px;
+    padding: 20px;
+    border: 10px solid transparent;
+    animation: border-pulse 3s linear infinite;
+    position: absolute;
+    z-index: 10;
+    left: 450px;
+   
+
+}
+
+#editTable{
+
+        width: 40%;
+        margin: auto;
+    
+}
+
+#closeTab{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#boundary{
+    max-width: 20px;
+}
