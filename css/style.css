@@ -262,7 +262,7 @@ input{
     border: 10px solid transparent;
     animation: border-pulse 3s linear infinite;
     position: absolute;
-    z-index: 10;
+    z-index: 30;
     left: 450px;
    
 
@@ -285,4 +285,23 @@ input{
 
 #boundary{
     max-width: 20px;
+}
+
+#background2{
+    width: 100vw;
+    height: 93.5vh;
+    position: relative;
+}
+
+#screen2{
+    width: 100vw;
+    height: 93.5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.79;
+    z-index: 20;
+    display: none;
+
 }

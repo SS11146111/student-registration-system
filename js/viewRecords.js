@@ -40,9 +40,11 @@ var tableData = data.map(record => (
       
       
       document.getElementById("editContainer").style.display = "block";
+      document.getElementById("screen2").style.display = "block";
       document.getElementById("closeTab").addEventListener("click", function(e){
         e.preventDefault();
         document.getElementById("editContainer").style.display = "none";
+        document.getElementById("screen2").style.display = "none";
       })
 
       document.getElementById("updateBtn").addEventListener("click", function(e){
@@ -64,6 +66,7 @@ var tableData = data.map(record => (
        currentData.push(updatedData);
        localStorage.setItem("formData", JSON.stringify(currentData));
        document.getElementById("editContainer").style.display = "none";
+       document.getElementById("screen2").style.display = "none";
        location.reload();
 
       })
