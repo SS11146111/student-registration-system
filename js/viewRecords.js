@@ -22,9 +22,13 @@ var tableData = data.map(record => (
     const data = e.target;
     if(data.classList[0] === "deleteBtn"){
         const parent = data.parentNode.parentNode;
-        const text=parent.childNodes[3].innerHTML;
+        const deleteRecordId = parent.childNodes[3].innerHTML;
+        parent.remove();
+
+        var existingData =JSON.parse(localStorage.getItem("formData"));
+        existingData = existingData.filter((d) => d.sid !== deleteRecordId)
+        localStorage.setItem("formData", JSON.stringify(existingData));
+    }  
         
-        //parent.remove();
-    }
   }
-  )
+)
