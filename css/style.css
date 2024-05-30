@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
    
     background-image: url("/images/backgroundImg.png");
     background-repeat: no-repeat;
@@ -14,50 +14,51 @@ body {
 }
 
 nav{
+
     background-image: linear-gradient(to right, rgb(0, 66, 0) ,rgb(61, 172, 61),rgb(144, 220, 144), rgb(61, 172, 61),rgb(0, 66, 0));
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
+
 }
 
-.heading{
-    text-align: center;
-}
+ul{
 
-h1{
-    padding: 10px 10px 0 10px;
-}
-
-ul {
     list-style-type: none;
     overflow: hidden;
+    padding-left: 10px;
+
 }
   
-li a, .dropBtn {
+li a, #dropBtn {
+
     display: inline-block;
     color: white;
     text-align: left;
     text-decoration: none;
+
 }
   
-li a:hover, .dropDown:hover .dropBtn {
+li a:hover, #dropDown:hover #dropBtn {
+
     background-color: red;
+
 }
   
-li.dropDown {
+li#dropDown {
     display: inline-block;
 }
   
-.dropDownContent {
+#dropDownContent {
     display: none;
     position: absolute;
     background-color: bisque;
     min-width: 150px;
     z-index: 1;
-  }
+}
   
-.dropDownContent a {
+#dropDownContent a {
     color: black;
     padding: 10px;
     text-decoration: none;
@@ -65,13 +66,54 @@ li.dropDown {
     text-align: left;
 }
   
-.dropDownContent a:hover {background-color: white;}
+#dropDownContent a:hover {
+    
+    background-color: white;
+
+}
   
-.dropDown:hover .dropDownContent {
+#dropDown:hover #dropDownContent {
+
     display: block;
+
 }
 
-.index-container{
+#heading{
+
+    text-align: center;
+}
+
+h1{
+
+    padding: 10px 10px 0;
+    text-shadow: 2px 2px 2px white;
+
+}
+
+p{
+    text-align: center;
+    margin: 10px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+#homeContainer{
+    width: 100vw;
+    height: 93.5vh;
+    position: relative;
+}
+
+#screen{
+    width: 100vw;
+    height: 93.5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.69;
+}
+
+#homeContent{
 
     background-color: bisque;
     width: 40%;
@@ -103,13 +145,6 @@ li.dropDown {
     }
 }
 
-p{
-    text-align: center;
-    margin: 10px;
-    font-style: italic;
-    font-weight: 800;
-}
-
 #formTable{
    width: 40%;
    margin: auto;
@@ -138,36 +173,23 @@ input{
    padding: 5px;
 }
 
-#home-container{
+
+#recordsContainer{
     width: 100vw;
     height: 93.5vh;
     position: relative;
 }
 
-#records-container{
-    width: 100vw;
-    height: 93.5vh;
-    position: relative;
-}
 
-#screen{
-    width: 100vw;
-    height: 93.5vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    opacity: 0.69;
-}
 
-#table-container {
+#recordsContent{
     position: absolute;
     z-index: 10;
     left: 100px;
 
 }
 
-#table-structure{
+#tableStructure{
 
    border-collapse: collapse; 
    width: 80%;
@@ -209,13 +231,13 @@ input{
 }
 
 
-#about-container{
+#aboutContainer{
     width: 100vw;
     height: 93.5vh;
     position: relative;
 }
 
-#about-content {
+#aboutContent {
     position: absolute;
     z-index: 10;
     left: 300px;
@@ -253,7 +275,6 @@ input{
 
 #editContainer{
    
-
     display: none;
     background-color: bisque;
     width: 40%;
@@ -264,7 +285,6 @@ input{
     position: absolute;
     z-index: 30;
     left: 450px;
-   
 
 }
 
@@ -304,4 +324,11 @@ input{
     z-index: 20;
     display: none;
 
+}
+
+#aboutContent p{
+    margin-top: 150px;
+    margin-left: 150px;
+    text-align: justify;
+    font-size: large;
 }

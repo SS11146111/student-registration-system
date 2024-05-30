@@ -14,29 +14,35 @@
 <body>
     <nav>
         <ul>
-            <li class="dropDown">
-                <a href="javascript:void(0)" class="dropBtn"><i class="fa fa-caret-down" style="font-size:36px"></i></a>
-                <div class="dropDownContent">
+            <li id="dropDown">
+                <a href="javascript:void(0)" id="dropBtn"><i class="fa fa-caret-down" style="font-size:36px"></i></a>
+                <div id="dropDownContent">
                     <a class="active" href="/index.html">Home</a>
                     <a href="viewRecords.html">View  Records</a>
                     <a href="about.html">About</a>
                 </div>
             </li>
         </ul>
-        
-        <div class="heading">
+        <div id="heading">
             <h1>Student Registration System</h1>
             <p>A system to add, update & delete student records!!</p>
         </div>
-
         <img src="/images/favicon.png" width="80">
-        
     </nav>
-
-    <div id="about-container">
-        <div id="screen"></div>
-        <div id="about-content"></div>
-    </div>
-
+    <article id="aboutContainer">
+        <section id="screen"></section>
+        <section id="aboutContent">
+            <p>
+                The functionalities of this system include: adding, updating, deleting student record.<br><br>
+                To add a student record, go to : Home-> fill the required details -> click - 'Add Record' button.<br>
+                If the record is inserted successfully, a message, 'Student registered successfully!!!' will pop up.<br>
+                The added record can be viewed in the 'View Records' table.<br><br>
+                To deleted a record, go to : View Records -> click the corresponding delete button.<br><br>
+                To edit a record, go to : View Records -> click the corresponding edit button.<br>
+                A window will pop up where you can fill the updated information and then click 'Update Record' button.<br> 
+                The updated data will appear on the 'View Records' table.<br>
+            </p>
+        </section>
+    </article>
 </body>
 </html>

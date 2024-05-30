@@ -17,54 +17,50 @@
 <body>
     <nav>
         <ul>
-            <li class="dropDown">
-                <a href="javascript:void(0)" class="dropBtn"><i class="fa fa-caret-down" style="font-size:36px"></i></a>
-                <div class="dropDownContent">
+            <li id="dropDown">
+                <a href="javascript:void(0)" id="dropBtn"><i class="fa fa-caret-down" style="font-size:36px"></i></a>
+                <div id="dropDownContent">
                     <a class="active" href="index.html">Home</a>
                     <a href="/html/viewRecords.html">View Records</a>
                     <a href="/html/about.html">About</a>
                 </div>
             </li>
-        </ul>
-        
-        <div class="heading">
+        </ul>   
+        <div id="heading">
             <h1>Student Registration System</h1>
             <p>A system to add, update & delete student records!!</p>
         </div>
-
-        <img src="/images/favicon.png" width="80">
-        
+        <img src="/images/favicon.png" width="80">   
     </nav>
-    <div id="home-container">
 
-        <div id="screen"></div>
-        <section class="index-container">
+    <article id="homeContainer">
+        <section id="screen"></section>
+        <section id="homeContent">
             <p>Fill in the following details to register a student</p>
             <form id="form">
                 <table id="formTable">
                     <tr>
-                        <!--name-->
+                        <!--student name-->
                         <td><label for="fullname"><i class="fa fa-pencil gap"></i></label></td>
                         <td><input type="text" class="size" id="fullname" name="fullname" placeholder="STUDENT NAME" required/></td> 
                     </tr>
                     <tr>
-                        <!--name-->
+                        <!--student id-->
                     <td><label for="studentid"><i class="fa fa-id-card gap"></i></label></td>
-                    <td><input type="text" class="size" id="studentid" name="studentid" placeholder="STUDENT ID" required/></td> 
-                </tr>
+                    <td><input type="number" class="size" id="studentid" name="studentid" placeholder="STUDENT ID" required/></td> 
+                    </tr>
                     <tr>
-                        <!--mail-->
+                        <!--student mail-->
                         <td><label for="mail"><i class="fa fa-envelope gap"></i></label></td>
                         <td> <input type="email" class="size" id="mail" name="mail" placeholder="EMAIL ID" required/></td>  
                     </tr>
                     <tr>
-                        <!--number-->
+                        <!--student number-->
                         <td><label for="number"><i class="fa fa-phone gap"></i></label></td>
                         <td> <input type="tel" class="size" id="number" name="number" placeholder="CONTACT NO." maxlength="10" required/></td> 
                     </tr>
                     <tr>
                         <!--submit button-->
-                        
                         <td></td>
                         <td><button type="submit" class="addRecordBtn">Add Record</button></td> 
                     </tr> 
@@ -74,6 +70,6 @@
                 </table>  
             </form>
         </section>    
-    </div>
+    </article>
 </body>
 </html>

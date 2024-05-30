@@ -1,23 +1,44 @@
+const data = JSON.parse(localStorage.getItem("formData"));
+let flag = "false";
+
 document.getElementById("form").addEventListener("submit",
 
 function(e) {
     e.preventDefault();
-
-
 
     const sname = document.getElementById("fullname").value;
     const sid = document.getElementById("studentid").value;
     const smail = document.getElementById("mail").value;
     const snumber = document.getElementById("number").value;
 
-    const formData = {
-        sname: sname,
-        sid: sid,
-        smail: smail,
-        snumber: snumber
-    };
+    for( let d of data)
+    {
+        if(d.sid === sid)
+        {
+            flag = "true";
+        }
+    }
 
-    addRecord(formData);
+    if(flag === "true")
+    {
+        document.getElementById("submitSuccess").innerHTML= "Student ID already exists!!!";
+        setTimeout(function(){
+            document.getElementById("submitSuccess").innerHTML="";
+        }, 2000);
+
+        flag = "false";
+    }
+    else
+    {
+        const formData = {
+            sname: sname,
+            sid: sid,
+            smail: smail,
+            snumber: snumber
+        };
+    
+        addRecord(formData);
+    }
 
 });
 
@@ -38,12 +59,11 @@ function addRecord(formData) {
 }
 
 function registered(){
-    document.getElementById("submitSuccess").innerHTML="Student Registered!!!";
+    document.getElementById("submitSuccess").innerHTML="Student registered successfully!!!";
     document.getElementById("submitSuccess").style.color="green";
     document.getElementById("submitSuccess").style.fontFamily="Arial";
     setTimeout(function(){
         document.getElementById("submitSuccess").innerHTML="";
-    }, 2000);
-    
+    }, 2000);    
 }
 
