@@ -1,7 +1,7 @@
-var data =JSON.parse(localStorage.getItem("formData"));
-
+const dataAll =JSON.parse(localStorage.getItem("formData"));
+var index;
 //creating the data to be displayed in the table in 'View Records'
-var tableData = data.map(record => (
+var tableData = dataAll.map(record => (
     `
     <tr>
         <td>${record.sname}</td>
@@ -39,8 +39,17 @@ document.getElementById("tableBody").addEventListener("click",
       const parent = data.parentNode.parentNode;
       const editRecordId = parent.childNodes[3].innerHTML;//getting the student id of the record to be edited
 
-      let currentData =JSON.parse(localStorage.getItem("formData"));//getting the remaing records except the record on which the edit button was clicked
+      for(let d of dataAll)
+        {
+          if(d.sid === editRecordId)
+            {
+              index = dataAll.indexOf(d); //getting the position of the student record to be edited
+            }
+        }
+
+      let currentData =JSON.parse(localStorage.getItem("formData"));//getting the remaining records except the record on which the edit button was clicked
       currentData = currentData.filter((d) => d.sid !== editRecordId);
+  
         
       document.getElementById("editContainer").style.display = "block";//displaying the edit form to get the updated information
       document.getElementById("screen2").style.display = "block";
@@ -68,7 +77,7 @@ document.getElementById("tableBody").addEventListener("click",
         };
 
         //merging the new data with the remaining data and writing it to localStorage
-        currentData.push(updatedData);
+        currentData.splice(index, 0, updatedData);
         localStorage.setItem("formData", JSON.stringify(currentData));
 
         document.getElementById("editContainer").style.display = "none";
