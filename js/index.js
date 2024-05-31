@@ -2,16 +2,18 @@ const data = JSON.parse(localStorage.getItem("formData"));
 let flag = "false";
 
 document.getElementById("form").addEventListener("submit",
-
+//when 'Add Record' button is clicked on the form, the following function will execute
 function(e) {
     e.preventDefault();
 
+    //collecting the student details from the form input fields
     const sname = document.getElementById("fullname").value;
     const sid = document.getElementById("studentid").value;
     const smail = document.getElementById("mail").value;
     const snumber = document.getElementById("number").value;
 
-    for( let d of data)
+    //checking if student id is unique
+    for(let d of data)
     {
         if(d.sid === sid)
         {
@@ -19,6 +21,7 @@ function(e) {
         }
     }
 
+    //if student id already exists
     if(flag === "true")
     {
         document.getElementById("submitSuccess").innerHTML= "Student ID already exists!!!";
@@ -28,7 +31,7 @@ function(e) {
 
         flag = "false";
     }
-    else
+    else //if student id is new
     {
         const formData = {
             sname: sname,
@@ -42,6 +45,7 @@ function(e) {
 
 });
 
+//function to merge new record with existing data and storing it in localStorage
 function addRecord(formData) {
     const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
 
@@ -58,6 +62,7 @@ function addRecord(formData) {
    
 }
 
+//on successful insertion of a record, this function will show a success message
 function registered(){
     document.getElementById("submitSuccess").innerHTML="Student registered successfully!!!";
     document.getElementById("submitSuccess").style.color="green";
