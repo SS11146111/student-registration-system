@@ -14,12 +14,12 @@ function(e) {
 
     //checking if student id is unique
     for(let d of data)
-    {
-        if(d.sid === sid)
         {
-            flag = "true";
+            if(d.sid === sid)
+            {
+                flag = "true";
+            }
         }
-    }
 
     //if student id already exists
     if(flag === "true")

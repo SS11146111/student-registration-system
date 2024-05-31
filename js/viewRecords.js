@@ -73,6 +73,8 @@ document.getElementById("tableBody").addEventListener("click",
         const smail = document.getElementById("mail").value;
         const snumber = document.getElementById("number").value;
 
+        
+
         const updatedData = {
           sname: sname,
           sid: sid,
