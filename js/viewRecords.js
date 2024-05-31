@@ -52,6 +52,10 @@ document.getElementById("tableBody").addEventListener("click",
   
         
       document.getElementById("editContainer").style.display = "block";//displaying the edit form to get the updated information
+        document.getElementById("fullname").value = parent.childNodes[1].innerHTML;
+        document.getElementById("studentid").value = parent.childNodes[3].innerHTML;
+        document.getElementById("mail").value = parent.childNodes[5].innerHTML;
+        document.getElementById("number").value = parent.childNodes[7].innerHTML;
       document.getElementById("screen2").style.display = "block";
 
       document.getElementById("closeTab").addEventListener("click", function(e){
