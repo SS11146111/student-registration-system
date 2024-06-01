@@ -290,28 +290,6 @@ input{
 
 }
 
-#deleteConfirm{
-   
-    display: none;
-    background-color: bisque;
-    width: 40%;
-    margin-top: 150px;
-    padding: 20px;
-    border: 10px solid transparent;
-    animation: border-pulse 3s linear infinite;
-    position: absolute;
-    z-index: 30;
-    left: 450px;
-
-}
-
-#deleteConfirmBtn{
-    float: right;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-}
 
 #editTable{
 
@@ -321,14 +299,6 @@ input{
 }
 
 #closeTab{
-    background-color: black;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#closeTab1{
     background-color: black;
     color: white;
     position: absolute;
@@ -347,25 +317,6 @@ input{
 }
 
 #screen2{
-    width: 100vw;
-    height: 93.5vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.79;
-    z-index: 20;
-    display: none;
-
-}
-
-#background1{
-    width: 100vw;
-    height: 93.5vh;
-    position: relative;
-}
-
-#screen1{
     width: 100vw;
     height: 93.5vh;
     position: absolute;
@@ -550,6 +501,7 @@ input{
         margin: 20px 20px;
     }
 
+
     #aboutContent{
 
         width: 800px;
@@ -615,6 +567,7 @@ input{
 
     }
 
+
     #tableStructure{
         height: 450px;
         margin: 10px 10px;
@@ -639,6 +592,7 @@ input{
         left: 45px;
         margin: 20px 20px;
     }
+
 
     #aboutContent{
 
@@ -808,6 +762,7 @@ input{
         left: 135px;
         margin: 20px 20px;
     }
+
 
     #aboutContent{
 
@@ -980,6 +935,7 @@ input{
         margin: 20px 20px;
     }
 
+
     #aboutContent{
 
         width: 320px;
@@ -1061,6 +1017,7 @@ input{
         top: 20px;
         left: 12px;
     }
+
 
     #aboutContent{
 
@@ -1145,6 +1102,7 @@ input{
         top: 20px;
         left: 12px;
     }
+
 
     #aboutContent{
 

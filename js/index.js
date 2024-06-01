@@ -47,9 +47,12 @@ function(e) {
 
 //function to merge new record with existing data and storing it in localStorage
 function addRecord(formData) {
-    const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
+    let storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
 
     storedFormData.push(formData);
+
+    storedFormData = storedFormData.sort((a,b) => { return a.sid - b.sid});
+
 
     localStorage.setItem('formData', JSON.stringify(storedFormData));
 

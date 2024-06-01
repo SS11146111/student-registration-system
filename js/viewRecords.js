@@ -28,27 +28,13 @@ document.getElementById("tableBody").addEventListener("click",
       const parent = data.parentNode.parentNode;
       const deleteRecordId = parent.childNodes[3].innerHTML; //getting the student id of the record to be deleted
 
-      document.getElementById("screen1").style.display = "block";
-      document.getElementById("deleteConfirm").style.display = "block";
 
-      document.getElementById("deleteConfirmBtn").addEventListener("click", 
-      function(){
-        parent.remove(); //removing the row to be deleted from the table
+      parent.remove(); //removing the row to be deleted from the table
 
         //revoming the deleted row from localStorage
-        var existingData =JSON.parse(localStorage.getItem("formData"));
-        existingData = existingData.filter((d) => d.sid !== deleteRecordId)
-        localStorage.setItem("formData", JSON.stringify(existingData));
-        document.getElementById("screen1").style.display = "none";
-        document.getElementById("deleteConfirm").style.display = "none";
-
-      })
-
-      document.getElementById("closeTab1").addEventListener("click", function(e){
-        e.preventDefault();
-        document.getElementById("screen1").style.display = "none";
-        document.getElementById("deleteConfirm").style.display = "none";
-      })
+      var existingData =JSON.parse(localStorage.getItem("formData"));
+      existingData = existingData.filter((d) => d.sid !== deleteRecordId)
+      localStorage.setItem("formData", JSON.stringify(existingData))
       
     } 
     else if(data.classList[0] === "editBtn"){ //if an edit button is clicked
