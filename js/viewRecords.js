@@ -55,8 +55,7 @@ document.getElementById("tableBody").addEventListener("click",
             }
         }
 
-      let currentData =JSON.parse(localStorage.getItem("formData"));//getting the remaining records except the record on which the edit button was clicked
-      currentData = currentData.filter((d) => d.sid !== editRecordId);
+      let currentData =JSON.parse(localStorage.getItem("formData"));//fetching the records 
   
       document.getElementById("screen2").style.display = "block";
       document.getElementById("editContainer").style.display = "block";//displaying the edit form to get the updated information
@@ -66,14 +65,12 @@ document.getElementById("tableBody").addEventListener("click",
         document.getElementById("number").value = parent.childNodes[7].innerHTML;
       
 
-      document.getElementById("closeTab").addEventListener("click", function(e){
-        e.preventDefault();
+      document.getElementById("closeTab").addEventListener("click", function(){
         document.getElementById("editContainer").style.display = "none";
         document.getElementById("screen2").style.display = "none";
       })
 
-      document.getElementById("updateBtn").addEventListener("click", function(e){ //when the updated information is filled and 'Update Record' is clicked
-        e.preventDefault();
+      document.getElementById("updateBtn").addEventListener("click", function(){ //when the updated information is filled and 'Update Record' is clicked
           
         //collecting the updated data
         const sname = document.getElementById("fullname").value;
@@ -91,7 +88,7 @@ document.getElementById("tableBody").addEventListener("click",
         };
 
         //merging the new data with the remaining data and writing it to localStorage
-        currentData.splice(index, 0, updatedData);
+        currentData.splice(index, 1, updatedData);
         localStorage.setItem("formData", JSON.stringify(currentData));
 
         document.getElementById("editContainer").style.display = "none";
