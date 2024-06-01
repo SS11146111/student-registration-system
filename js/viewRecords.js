@@ -1,5 +1,6 @@
 const dataAll =JSON.parse(localStorage.getItem("formData"));
 var index;
+
 //creating the data to be displayed in the table in 'View Records'
 var tableData = dataAll.map(record => (
     `
@@ -28,14 +29,18 @@ document.getElementById("tableBody").addEventListener("click",
       const parent = data.parentNode.parentNode;
       const deleteRecordId = parent.childNodes[3].innerHTML; //getting the student id of the record to be deleted
 
+      //confirming the delete action
+      const isDelete = confirm("You are about to delete this record. Confirm?");
+      if(isDelete)
+        {
+          parent.remove(); //removing the row to be deleted from the table
 
-      parent.remove(); //removing the row to be deleted from the table
+          //removing the deleted row from localStorage
+          var existingData =JSON.parse(localStorage.getItem("formData"));
+          existingData = existingData.filter((d) => d.sid !== deleteRecordId)
+          localStorage.setItem("formData", JSON.stringify(existingData));
 
-        //revoming the deleted row from localStorage
-      var existingData =JSON.parse(localStorage.getItem("formData"));
-      existingData = existingData.filter((d) => d.sid !== deleteRecordId)
-      localStorage.setItem("formData", JSON.stringify(existingData))
-      
+        }
     } 
     else if(data.classList[0] === "editBtn"){ //if an edit button is clicked
 
@@ -53,13 +58,13 @@ document.getElementById("tableBody").addEventListener("click",
       let currentData =JSON.parse(localStorage.getItem("formData"));//getting the remaining records except the record on which the edit button was clicked
       currentData = currentData.filter((d) => d.sid !== editRecordId);
   
-        
+      document.getElementById("screen2").style.display = "block";
       document.getElementById("editContainer").style.display = "block";//displaying the edit form to get the updated information
         document.getElementById("fullname").value = parent.childNodes[1].innerHTML;
         document.getElementById("studentid").value = parent.childNodes[3].innerHTML;
         document.getElementById("mail").value = parent.childNodes[5].innerHTML;
         document.getElementById("number").value = parent.childNodes[7].innerHTML;
-      document.getElementById("screen2").style.display = "block";
+      
 
       document.getElementById("closeTab").addEventListener("click", function(e){
         e.preventDefault();

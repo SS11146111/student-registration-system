@@ -337,6 +337,17 @@ input{
     font-size: large;
 }
 
+#delConfirmBtn {
+
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+
+
+}
+
 
 /*css for responsive design*/
 
