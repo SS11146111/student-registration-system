@@ -13,7 +13,8 @@ Functionalities:
 
    index.js contains the code for adding a new record. The details from the form fields are collected into an object (formData) which is
    merged with the existing array of records (storedFormData.push(formData);) and then stored in localStorage.
-   (localStorage.setItem('formData', JSON.stringify(storedFormData));)
+   (localStorage.setItem('formData', JSON.stringify(storedFormData));) .Student id is considered unique. Duplicate records by student id
+   does not get added
 
 2. Edit a record:
    To edit a record, go to ‘View Records’, click the corresponding edit button, a window will pop up where you can fill the updated 
