@@ -1,11 +1,9 @@
-const data = JSON.parse(localStorage.getItem("formData"));
-let flag = "false";
-
 document.getElementById("form").addEventListener("submit",
 //when 'Add Record' button is clicked on the form, the following function will execute
 function(e) {
     e.preventDefault();
-
+    const data = JSON.parse(localStorage.getItem("formData"));
+    let flag = "false";
     //collecting the student details from the form input fields
     const sname = document.getElementById("fullname").value;
     const sid = document.getElementById("studentid").value;
@@ -25,6 +23,8 @@ function(e) {
     if(flag === "true")
     {
         document.getElementById("submitSuccess").innerHTML= "Student ID already exists!!!";
+        document.getElementById("submitSuccess").style.color="black";
+        document.getElementById("submitSuccess").style.fontFamily="Arial";
         setTimeout(function(){
             document.getElementById("submitSuccess").innerHTML="";
         }, 2000);
@@ -71,4 +71,5 @@ function registered(){
         document.getElementById("submitSuccess").innerHTML="";
     }, 2000);    
 }
+
 
