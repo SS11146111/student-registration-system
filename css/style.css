@@ -372,7 +372,7 @@ input{
         width: 800px;
         height: 430px;
         left: 250px;
-        top: -80px;   
+        top: 20px;   
         margin-bottom: 10px;     
     }
 
@@ -390,7 +390,7 @@ input{
     #recordsContent
     {
         width: 800px;
-        top: 100px;
+        top: 20px;
         left: 200px;
 
     }
@@ -415,7 +415,7 @@ input{
     #editContainer{
 
         width: 800px;
-        top: 80px;
+        top: 20px;
         left: 200px;
         margin: 20px 20px;
     }
@@ -423,7 +423,7 @@ input{
     #aboutContent{
 
         width: 800px;
-        top: 145px;
+        top: 20px;
         left: 200px;
         margin: 20px 20px;    
        
@@ -462,7 +462,7 @@ input{
         width: 800px;
         height: 430px;
         left: 125px;
-        top: -80px;   
+        top: 20px;   
         margin-bottom: 10px;     
     }
 
@@ -480,7 +480,7 @@ input{
     #recordsContent
     {
         width: 800px;
-        top: 10px;
+        top: 20px;
         left: 85px;
 
     }
@@ -505,7 +505,7 @@ input{
     #editContainer{
 
         width: 800px;
-        top: 80px;
+        top: 20px;
         left: 80px;
         margin: 20px 20px;
     }
@@ -514,7 +514,7 @@ input{
     #aboutContent{
 
         width: 800px;
-        top: 145px;
+        top: 20px;
         left: 135px;
         margin: 20px 20px;    
        
@@ -551,8 +551,8 @@ input{
     #homeContent{
     
         width: 700px;
-        height: 500px;
-        top: 70px;
+        height: 400px;
+        top: 20px;
         left: 115px;
         
     }
@@ -560,7 +560,7 @@ input{
     #fullname, #studentid, #mail, #number{
 
         width: 500px;
-        margin: 20px;
+        margin: 10px;
     }
 
     .addRecordBtn{
@@ -571,14 +571,14 @@ input{
     #recordsContent
     {
         width: 800px;
-        top: 150px;
+        top: 20px;
         left: 45px;
 
     }
 
 
     #tableStructure{
-        height: 450px;
+        height: 400px;
         margin: 10px 10px;
     }
 
@@ -589,7 +589,7 @@ input{
 
     #tableBody {
         width: 800px;
-        height: 450px;      
+        height: 400px;      
         overflow-y: auto;    
         overflow-x: auto;
     }
@@ -597,7 +597,7 @@ input{
     #editContainer{
 
         width: 800px;
-        top: 145px;
+        top: 25px;
         left: 45px;
         margin: 20px 20px;
     }
@@ -606,7 +606,7 @@ input{
     #aboutContent{
 
         width: 800px;
-        top: 345px;
+        top: 25px;
         left: 85px;
         margin: 20px 20px;    
        
@@ -645,7 +645,7 @@ input{
     #homeContent{
     
         width: 500px;
-        top: 45px;
+        top: 25px;
         left: 155px;
         
     }
@@ -658,7 +658,7 @@ input{
     #recordsContent
     {
         width: 600px;
-        top: 150px;
+        top: 25px;
         left: 85px;
 
     }
@@ -683,7 +683,7 @@ input{
     #editContainer{
 
         width: 500px;
-        top: 145px;
+        top: 20px;
         left: 135px;
         margin: 20px 20px;
     }
@@ -691,7 +691,7 @@ input{
     #aboutContent{
 
         width: 500px;
-        top: 145px;
+        top: 20px;
         left: 135px;
         margin: 20px 20px;    
        
@@ -729,7 +729,7 @@ input{
     #homeContent{
     
         width: 500px;
-        top: 45px;
+        top: 20px;
         left: 135px;
         
     }
@@ -742,7 +742,7 @@ input{
     #recordsContent
     {
         width: 600px;
-        top: 150px;
+        top: 20px;
         left: 55px;
 
     }
@@ -767,7 +767,7 @@ input{
     #editContainer{
 
         width: 500px;
-        top: 145px;
+        top: 20px;
         left: 135px;
         margin: 20px 20px;
     }
@@ -776,8 +776,95 @@ input{
     #aboutContent{
 
         width: 500px;
-        top: 145px;
+        top: 20px;
         left: 135px;
+        margin: 20px 20px;    
+       
+    }
+
+    #aboutContent p{
+    
+        position: relative;
+        margin: auto;
+        font-size: medium;
+       
+    }    
+}
+
+
+
+@media screen and (max-width: 670px){
+   
+    body{
+   
+        background-image: url("/images/backgroundImg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    nav{
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #homeContent{
+    
+        width: 400px;
+        height: 460px;
+        top: 10px;
+        left: 70px;
+        margin: 20px 20px;
+        
+    }
+
+    #fullname, #studentid, #mail, #number{
+
+        width: 200px;
+    }
+
+    #recordsContent
+    {
+        width: 400px;
+        top: 10px;
+        left: 70px;
+
+    }
+
+    #tableStructure{
+        height: 400px;
+        margin: 10px 10px;
+    }
+
+    #tableHead{
+        width: 400px;
+        overflow-x: auto;
+    }
+
+    #tableBody {
+        width: 400px;
+        height: 400px;      
+        overflow-y: auto;    
+        overflow-x: auto;
+    }
+
+    #editContainer{
+
+        width: 400px;
+        top: 10px;
+        left: 70px;
+        margin: 20px 20px;
+    }
+
+
+    #aboutContent{
+
+        width: 400px;
+        top: 10px;
+        left: 70px;
         margin: 20px 20px;    
        
     }

@@ -1,6 +1,7 @@
 document.getElementById("form").addEventListener("submit",
 //when 'Add Record' button is clicked on the form, the following function will execute
-function() {
+function(e) {
+    e.preventDefault();
     
     const data = JSON.parse(localStorage.getItem("formData"));
     let flag = "false";
@@ -73,7 +74,7 @@ function registered(){
     document.getElementById("submitSuccess").style.fontFamily="Arial";
     setTimeout(function(){
         document.getElementById("submitSuccess").innerHTML="";
-    }, 3000);    
+    }, 2000);    
 }
 
 

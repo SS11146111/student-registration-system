@@ -55,7 +55,7 @@ document.getElementById("tableBody").addEventListener("click",
             }
         }
 
-      let currentData =JSON.parse(localStorage.getItem("formData"));//fetching the records 
+      let currentData =JSON.parse(localStorage.getItem("formData"));//fetching the existing records 
   
       document.getElementById("screen2").style.display = "block";
       document.getElementById("editContainer").style.display = "block";//displaying the edit form to get the updated information
