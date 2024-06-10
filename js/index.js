@@ -35,6 +35,11 @@ function(e) {
     }
     else //if student id is new
     {
+        if (sname == " ") {
+            alert("Enter valid Student name...");
+            return false;
+        }
+        
         const formData = {
             sname: sname,
             sid: sid,
