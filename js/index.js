@@ -13,14 +13,18 @@ function(e) {
     const snumber = document.getElementById("number").value;
 
     //checking if student id is unique
-    for(let d of data)
+    if(data != null)
         {
-            if(d.sid === sid)
-            {
-                flag = "true";
-            }
+            for(let d of data)
+                {
+                    if(d.sid === sid)
+                    {
+                        flag = "true";
+                    }
+                }
+        
         }
-
+    
     //if student id already exists
     if(flag === "true")
     {
