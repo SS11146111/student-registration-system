@@ -41,10 +41,7 @@ Functionalities:
 
 Author: Sangita Saha
 Project link: https://github.com/SS11146111/student-registration-system.git
-
-   
-
-
+Site : https://sangitastudentregistrationsystem.netlify.app
 
 
 
